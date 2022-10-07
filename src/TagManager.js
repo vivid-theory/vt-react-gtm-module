@@ -29,10 +29,11 @@ const TagManager = {
       dataScript
     }
   },
-  initialize: function ({ gtmId, events = {}, dataLayer, dataLayerName = 'dataLayer', auth = '', preview = '' }) {
+  initialize: function ({ gtmId, events = {}, domain , dataLayer, dataLayerName = 'dataLayer', auth = '', preview = '' }) {
     const gtm = this.gtm({
       id: gtmId,
       events: events,
+      domain: domain,
       dataLayer: dataLayer || undefined,
       dataLayerName: dataLayerName,
       auth,
