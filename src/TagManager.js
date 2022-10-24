@@ -44,6 +44,7 @@ const TagManager = {
     document.body.insertBefore(gtm.noScript(), document.body.childNodes[0])
   },
   dataLayer: function ({dataLayer, dataLayerName = 'dataLayer'}) {
+    if (!window) return;
     if (window[dataLayerName]) return window[dataLayerName].push(dataLayer)
     const snippets = Snippets.dataLayer(dataLayer, dataLayerName)
     const dataScript = this.dataScript(snippets)
