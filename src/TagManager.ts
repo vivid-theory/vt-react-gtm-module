@@ -80,7 +80,7 @@ const TagManager = {
     dataLayerName: any,
   }) {
     if (!window) return;
-    if (window[dataLayerName]) return window[dataLayerName].push(dataLayer)
+    if (window[dataLayerName])  return window.dataLayerName.push(dataLayer)
     const snippets = Snippets.dataLayer(dataLayer, dataLayerName)
     const dataScript = this.dataScript(snippets)
     document.head.insertBefore(dataScript, document.head.childNodes[0])
