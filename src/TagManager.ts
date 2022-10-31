@@ -35,7 +35,7 @@ const TagManager = {
     }
 
     const script = () => {
-      const script = document.createElement('script')
+      const script = Object.assign(document.createElement('script'), {type:"module"});
       script.innerHTML = snippets.script
       return script
     }
