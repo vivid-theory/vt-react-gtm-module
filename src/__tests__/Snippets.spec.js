@@ -5,7 +5,7 @@ let snippets
 
 describe('Snippets', () => {
   beforeEach(() => {
-    args = { id: 'GTM-abc123', dataLayerName: 'dataLayer', events: {} }
+    args = { id: 'GTM-abc123', domain: "helloworld.com", dataLayerName: 'dataLayer', events: {} }
     snippets = Snippets.tags(args)
   })
   

@@ -1,8 +1,9 @@
 {
-  "name": "react-gtm-module",
-  "version": "2.0.11",
+  "name": "@vividtheory/vt-react-gtm-module",
+  "version": "0.1.0",
   "description": "React Google Tag Manager Module",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "lint": "eslint .",
     "jest": "jest",
@@ -12,18 +13,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alinemorelli/react-gtm"
+    "url": "git+https://github.com/vivid-theory/vt-react-gtm-module.git"
   },
-  "author": {
-    "name": "Aline Morelli",
-    "email": "aline.morelliw@gmail.com",
-    "url": "https://github.com/alinemorelli"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/alinemorelli/react-gtm/issues"
-  },
-  "homepage": "",
+  "author": "Allen Lu <allen@vividtheory.com> (https://github.com/apluualberta)",
+  "homepage": "https://github.com/vivid-theory/vt-react-gtm-module#readme",
   "keywords": [
     "react",
     "reactjs",
@@ -47,5 +40,14 @@
   "jest": {
     "testRegex": "__tests__.*\\.spec.js$",
     "collectCoverage": true
-  }
+  },
+  "dependencies": {
+    "@types/jquery": "^3.5.14",
+    "awesome-typescript-loader": "^5.2.1",
+    "source-map-loader": "^4.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/vivid-theory/vt-react-gtm-module/issues"
+  },
+  "license": "ISC"
 }
