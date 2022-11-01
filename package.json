@@ -1,10 +1,11 @@
 {
   "name": "@vividtheory/vt-react-gtm-module",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "JS Editted version React Google Tag Manager Module",
   "main": "dist/index.js",
   "modules": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type" : "module",
   "files": [
     "dist"
 ],
@@ -52,5 +53,10 @@
   "jest": {
     "testRegex": "__tests__.*\\.spec.js$",
     "collectCoverage": true
+  },
+  "exports" : {
+    "import": "./dist/index.js",
+    "export" : "./dist/index.js",
+    "require" : "./dist/index.js"
   }
 }
