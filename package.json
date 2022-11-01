@@ -3,7 +3,7 @@
   "version": "0.2.4",
   "description": "JS Editted version React Google Tag Manager Module",
   "main": "dist/index.js",
-  "modules": "dist/index.js",
+  "modules": "dist/index",
   "types": "dist/index.d.ts",
   "scripts": {
     "lint": "eslint .",
