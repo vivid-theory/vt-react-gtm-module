@@ -1,31 +1,12 @@
 import Snippets from './Snippets'
 
-
-declare global {
-  interface Window { // ⚠️ notice that "Window" is capitalized here
-    dataLayerName: any;
-  }
-}
-
-//{ gtmId, events = {}, domain , dataLayer, dataLayerName = 'dataLayer', auth = '', preview = '' }
-export interface InitInterface {
-
-  readonly gtmId: string,
-  readonly events?: any,
-  readonly domain: string,
-  readonly dataLayer?: any,
-  readonly dataLayerName?: any,
-  readonly auth?: any,
-  readonly preview?: any,
-}
-
 const TagManager = {
-  dataScript: function (dataLayer: any) {
+  dataScript: function (dataLayer) {
     const script = document.createElement('script')
     script.innerHTML = dataLayer
     return script
   },
-  gtm: function (args: any) {
+  gtm: function (args) {
     const snippets = Snippets.tags(args)
 
     const noScript = () => {
@@ -57,9 +38,7 @@ const TagManager = {
       dataLayerName = 'dataLayer', 
       auth = '', 
       preview = '' 
-    }:
-    InitInterface
-    ) {
+    }) {
     const gtm = this.gtm({
       id: gtmId,
       events: events,
@@ -73,14 +52,9 @@ const TagManager = {
     document.head.insertBefore(gtm.script(), document.head.childNodes[0])
     document.body.insertBefore(gtm.noScript(), document.body.childNodes[0])
   },
-  dataLayer: function ({dataLayer, dataLayerName = 'dataLayer'} 
-  :
-  {
-    dataLayer: any,
-    dataLayerName: any,
-  }) {
+  dataLayer: function ({dataLayer, dataLayerName = 'dataLayer'}) {
     if (!window) return;
-    if (window[dataLayerName])  return window.dataLayerName.push(dataLayer)
+    if (window[dataLayerName])  return window["dataLayerName"].push(dataLayer)
     const snippets = Snippets.dataLayer(dataLayer, dataLayerName)
     const dataScript = this.dataScript(snippets)
     document.head.insertBefore(dataScript, document.head.childNodes[0])

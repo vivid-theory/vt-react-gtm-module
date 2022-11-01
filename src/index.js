@@ -1,3 +1,3 @@
 import TagManager from './TagManager'
 
-export default TagManager;
+module.exports = TagManager

@@ -3,17 +3,7 @@ import warn from './utils/warn'
 // https://developers.google.com/tag-manager/quickstart
 
 const Snippets = {
-  tags: function ({ id, events, domain, dataLayer, dataLayerName, preview, auth }
-    :
-  {
-    id: any,
-    events: any,
-    domain: any,
-    dataLayer: any,
-    dataLayerName: any,
-    preview: any,
-    auth: any,
-  }) {
+  tags: function ({ id, events, domain, dataLayer, dataLayerName, preview, auth }) {
     const gtm_auth = `&gtm_auth=${auth}`
     const gtm_preview = `&gtm_preview=${preview}`
 
@@ -39,7 +29,7 @@ const Snippets = {
       dataLayerVar
     }
   },
-  dataLayer: function (dataLayer : any, dataLayerName : any) {
+  dataLayer: function (dataLayer, dataLayerName) {
     return `
       window.${dataLayerName} = window.${dataLayerName} || [];
       window.${dataLayerName}.push(${JSON.stringify(dataLayer)})`

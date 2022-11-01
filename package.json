@@ -1,34 +1,29 @@
 {
   "name": "@vividtheory/vt-react-gtm-module",
-  "version": "0.1.9",
-  "description": "React Google Tag Manager Module",
+  "version": "0.2.0",
+  "description": "JS Editted version React Google Tag Manager Module",
   "main": "dist/index.js",
-  "modules": "dist/index.js",
-  "types": "dist/index.d.ts",
   "scripts": {
-    "prebuild": "rimraf lib",
-    "build": "yarn run build:lib",
-    "build:watch": "yarn run build:lib -watch",
-    "build-storybook": "build-storybook",
-    "build:lib": "tsc",
-    "build:lib:dev": "tsc --incremental",
-    "check": "tsc --noEmit",
-    "format": "prettier --write \"src/**/*{.ts,.tsx}\"",
-    "gen": "npx generate-react-cli",
-    "lint": "eslint --fix --ext .ts,.tsx ./src",
-    "pkg-ok": "pkg-ok",
-    "prepublish": "yarn run build",
-    "storybook": "start-storybook -p 3010",
-    "test": "yarn run check && yarn run pkg-ok",
-    "test:lint": "eslint '{src}/**/*.ts'",
-    "test:workflow": "echo PASSED. Test not integrated"
+    "lint": "eslint .",
+    "jest": "jest",
+    "test": "npm run lint && npm run jest",
+    "build": "babel src -d dist --ignore src/__tests__",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vivid-theory/vt-react-gtm-module.git"
+    "url": "https://github.com/vivid-theory/vt-react-gtm-module"
   },
-  "author": "Allen Lu <allen@vividtheory.com> (https://github.com/apluualberta)",
-  "homepage": "https://github.com/vivid-theory/vt-react-gtm-module#readme",
+  "author": {
+    "name": "Allen Peng Lu",
+    "email": "allen@vividtheory.com",
+    "url": "https://github.com/apluualberta"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alinemorelli/react-gtm/issues"
+  },
+  "homepage": "",
   "keywords": [
     "react",
     "reactjs",
@@ -52,14 +47,5 @@
   "jest": {
     "testRegex": "__tests__.*\\.spec.js$",
     "collectCoverage": true
-  },
-  "dependencies": {
-    "@types/jquery": "^3.5.14",
-    "awesome-typescript-loader": "^5.2.1",
-    "source-map-loader": "^4.0.1"
-  },
-  "bugs": {
-    "url": "https://github.com/vivid-theory/vt-react-gtm-module/issues"
-  },
-  "license": "ISC"
+  }
 }
