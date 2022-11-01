@@ -3,7 +3,6 @@
   "version": "0.2.10",
   "description": "JS Editted version React Google Tag Manager Module",
   "main": "dist/index.js",
-  "modules": "dist/index.js",
   "type" : "module",
   "files": [
     "dist"
@@ -52,10 +51,5 @@
   "jest": {
     "testRegex": "__tests__.*\\.spec.js$",
     "collectCoverage": true
-  },
-  "exports" : {
-    "import": "./dist/index.js",
-    "export" : "./dist/index.js",
-    "require" : "./dist/index.js"
   }
 }
