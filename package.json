@@ -1,9 +1,9 @@
 {
   "name": "@vividtheory/vt-react-gtm-module",
-  "version": "0.2.4",
+  "version": "0.2.6",
   "description": "JS Editted version React Google Tag Manager Module",
   "main": "dist/index.js",
-  "modules": "dist/index",
+  "modules": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "lint": "eslint .",
