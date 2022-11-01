@@ -1,6 +1,6 @@
 {
   "name": "@vividtheory/vt-react-gtm-module",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "JS Editted version React Google Tag Manager Module",
   "main": "dist/index.js",
   "modules": "dist/index.js",
