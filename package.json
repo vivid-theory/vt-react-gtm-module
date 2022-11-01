@@ -5,6 +5,9 @@
   "main": "dist/index.js",
   "modules": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+],
   "scripts": {
     "lint": "eslint .",
     "jest": "jest",
