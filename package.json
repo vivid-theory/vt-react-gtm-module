@@ -1,8 +1,10 @@
 {
   "name": "@vividtheory/vt-react-gtm-module",
-  "version": "0.2.12",
+  "version": "0.2.23",
   "description": "JS Editted version React Google Tag Manager Module",
-  "main": "dist/index.js",
+  "main": "dist/index.js",  
+  "types": "./dist/index.d.ts",
+  "modules": "dist/index.js",
   "type" : "module",
   "files": [
     "dist"
@@ -11,7 +13,7 @@
     "lint": "eslint .",
     "jest": "jest",
     "test": "npm run lint && npm run jest",
-    "build": "babel src -d dist --ignore src/__tests__ && tsc --project tsconfig.tyhpes,json",
+    "build": "babel src -d dist --ignore src/__tests__ && tsc --declaration",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -46,10 +48,16 @@
     "eslint": "^4.18.2",
     "jest": "^19.0.2",
     "jest-cli": "^21.2.1",
-    "sinon": "^1.14.1"
+    "sinon": "^1.14.1",
+    "@types/webrtc":"^0.0.33"
   },
   "jest": {
     "testRegex": "__tests__.*\\.spec.js$",
     "collectCoverage": true
+  },
+  "exports" : {
+    "import": "./dist/index.js",
+    "export" : "./dist/index.js",
+    "require" : "./dist/index.js"
   }
 }
