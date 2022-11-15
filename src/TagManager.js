@@ -1,6 +1,6 @@
 import Snippets from './Snippets'
 
-const TagManager = {
+export default TagManager = {
   dataScript: function (dataLayer) {
     const script = document.createElement('script')
     script.innerHTML = dataLayer
@@ -60,4 +60,3 @@ const TagManager = {
     document.head.insertBefore(dataScript, document.head.childNodes[0])
   }
 }
-export default TagManager;
